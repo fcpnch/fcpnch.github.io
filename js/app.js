@@ -37,7 +37,7 @@ angular.module("fcpnchIt", ["ngAnimate"])
                     var shortPostID = base62(Number(postID), 62);
                     
                     if (postID.length > 0) {
-                        $scope.shortned = "fcpn.ch/" + shortPostID;
+                        $scope.shortned = "fcpn.ch#" + shortPostID;
                     } else {
                         $scope.invalidIn = true;
                     }
