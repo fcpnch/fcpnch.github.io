@@ -1,1 +1,24 @@
-<!doctype html><title>fcpn.ch redirecting...</title><script type="text/javascript">function b62to10(o){for(var t=0,h=0;h<o.length;h++){var a=o.charAt(h),n=lookUp.indexOf(a);console.log(a,n),t+=n*Math.pow(62,o.length-h-1)}return t}var hash=window.location.hash.slice(1);if(""==hash)window.location="shortn";else{var lookUp="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",postID=b62to10(hash);window.location="http://facepunch.com/showthread.php?p="+postID+"#post"+postID}</script>
+<!doctype html>
+<title>fcpn.ch redirecting...</title>
+<script type="text/javascript">
+	var hash = window.location.hash.slice(1);
+	console.log(hash);
+	if (hash == "") {
+		window.location = "shortn"
+	} else {
+		var lookUp = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+		function b62to10(str) {
+			var res = 0;
+			for (var idx = 0; idx < str.length; idx++) {
+				var character = str.charAt(idx);
+				var pos = lookUp.indexOf(character);
+				console.log(character, pos)
+				res += pos * Math.pow(62, str.length - idx - 1);
+			}
+			return res;
+		}
+		var postID = b62to10(hash);
+
+		//window.location = "http://facepunch.com/showthread.php?p=" + postID + "#post" + postID;
+	}
+</script>
