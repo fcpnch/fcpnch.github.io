@@ -76,13 +76,3 @@ color: green;
 #userScript {
     font-size:  .55em;
 }
-
-#footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 1.5em;
-    font-weight: 400;
-    background-color: rgba(150, 150, 150, .25);
-}
