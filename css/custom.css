@@ -29,7 +29,7 @@ color: green;
     font-size: 2em;
     border: 0;
     text-align: center;
-    
+    outline: none;
 }
 
 #resultCon {
