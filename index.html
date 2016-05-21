@@ -1,9 +1,8 @@
 <!doctype html>
 <title>fcpn.ch redirecting...</title>
 <script type="text/javascript" data-cfasync="false">
-	var hash = window.location.hash.slice(1);
-	console.log(hash);
-	if (hash == "") {
+	var path = window.location.pathname.slice(1);
+	if (path == "") {
 		window.location = "shortn"
 	} else {
 		var lookUp = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
@@ -17,7 +16,7 @@
 			}
 			return res;
 		}
-		var postID = b62to10(hash);
+		var postID = b62to10(path);
 
 		window.location = "http://facepunch.com/showthread.php?p=" + postID + "#post" + postID;
 	}
